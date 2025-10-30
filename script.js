@@ -1,4 +1,4 @@
-let display = document.getElementById('display');
+const display = document.getElementById('display');
 
 function appendValue(value) {
   display.value += value;
@@ -15,7 +15,7 @@ function deleteLast() {
 function calculate() {
   try {
     display.value = eval(display.value.replace('%', '/100'));
-  } catch (error) {
+  } catch {
     display.value = 'Error';
   }
 }
